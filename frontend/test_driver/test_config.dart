@@ -9,8 +9,8 @@ Future<void> main() {
   final config = FlutterTestConfiguration()
     ..features = [Glob(r"test_driver/features/**.feature")]
     ..reporters = [ProgressReporter()]
-    ..stepDefinitions = [ClickOnElement(), CheckFieldAndText()]
-    ..restartAppBetweenScenarios = true
+    ..stepDefinitions = [ClickOnElement(), CheckFieldAndText(), PutTextOnField()]
+    ..restartAppBetweenScenarios = false
     ..targetAppPath = "test_driver/app-bdd.dart"
     ..exitAfterTestRun = true;
   return GherkinRunner().execute(config);

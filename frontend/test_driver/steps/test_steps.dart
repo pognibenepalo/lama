@@ -25,3 +25,15 @@ class CheckFieldAndText extends Given2WithWorld<String, String, FlutterWorld> {
   @override
   RegExp get pattern => RegExp(r"I should have a field {string} with the value {string}");
 }
+
+class PutTextOnField extends Given2WithWorld<String, String, FlutterWorld> {
+  @override
+  Future<void> executeStep(String text, String elementId) async {
+    final elementFinder = find.byValueKey(elementId);
+    await FlutterDriverUtils.enterText(world.driver, elementFinder, text);
+  }
+
+  @override
+  RegExp get pattern => RegExp(r"I put the text {string} on the field {string}");
+}
+

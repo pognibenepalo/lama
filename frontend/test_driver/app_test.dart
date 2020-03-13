@@ -18,7 +18,7 @@ void main() {
 
     Timer timeout;
     setUp(() {
-//      timeout = new Timer(new Duration(seconds: 2), () => fail("timed out"));
+      timeout = new Timer(new Duration(seconds: 2), () => fail("timed out"));
     });
 
     test('First dateItem should be 12 Mar 2020', () async {

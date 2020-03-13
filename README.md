@@ -26,6 +26,6 @@ To run the classic flutter tests from the command line:
 
     flutter drive --target=test_driver/app.dart
 
-If you want to run behaviour tests writes in Gherkin from comand line:
+If you want to run behaviour tests writes in Gherkin from command line:
 
     dart test_driver/test_config.dart

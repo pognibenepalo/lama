@@ -3,16 +3,18 @@ import 'package:lama_frontend/app-theme.dart';
 import 'package:lama_frontend/word.dart';
 
 class WordItem extends StatefulWidget {
+  final int index;
   final Word word;
   final BuildContext mainContext;
   final dynamic onLongPress;
-  WordItem({Key key, this.word, this.mainContext, this.onLongPress});
+  WordItem({int this.index, this.word, this.mainContext, this.onLongPress});
 
   @override
   _WordItem createState() => _WordItem(word, mainContext, onLongPress);
 }
 
 class _WordItem extends State<WordItem> {
+  int index;
   Word word;
   BuildContext mainContext;
   dynamic onLongPress;
@@ -24,7 +26,7 @@ class _WordItem extends State<WordItem> {
   Widget build(BuildContext context) {
     print('--> ${widget.word.word}');
     return GestureDetector(
-      key: widget.key,
+      key: Key('gesture${widget.index}'),
       onTap: () {
         setState(() {
           collapesed = !collapesed;
@@ -51,7 +53,7 @@ class _WordItem extends State<WordItem> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   widget.word.word,
-                  key: Key('word${widget.key}'),
+                  key: Key('word${widget.index}'),
                   style: TextStyle(
                       color: AppTheme.grey,
                       fontSize: 20,
@@ -67,7 +69,7 @@ class _WordItem extends State<WordItem> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               widget.word.description,
-                              key: Key('wordDesc0'),
+                              key: Key('wordDesc${widget.index}'),
                               style: TextStyle(
                                 color: AppTheme.grey,
                               ),
@@ -77,7 +79,7 @@ class _WordItem extends State<WordItem> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               word.quote,
-                              key: Key('wordQuote0'),
+                              key: Key('wordQuote${widget.index}'),
                               style: TextStyle(
                                 color: AppTheme.grey,
                               ),

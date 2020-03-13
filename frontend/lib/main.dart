@@ -65,7 +65,8 @@ class _AfterSplash extends State<AfterSplash> {
     if (oldWord == null) {
       await Dio().post("${Constants.apiServer}/words/", data: newWord.toJson());
     } else {
-      await Dio().put("${Constants.apiServer}/words/${oldWord.id}", data: newWord.toJson);
+      await Dio().put("${Constants.apiServer}/words/${oldWord.id}",
+          data: newWord.toJson);
     }
     fetchWords();
   }
@@ -89,16 +90,24 @@ class _AfterSplash extends State<AfterSplash> {
     List<Widget> items = [];
     var dates = groupBy(words, (obj) {
       Word word = obj as Word;
-      // return word.createdAt.day;
       return word.createdAt;
     });
+
+    print(dates);
+
     var sortedDates = dates.keys.toList()..sort();
-    sortedDates.forEach((key) {
-      items.add(DateItem(key));
-      dates[key].forEach((word) {
+
+    print(sortedDates);
+
+    sortedDates.asMap().forEach((index, value) {
+      print(dates[index]);
+
+      items.add(DateItem(index, value));
+
+      dates[value].asMap().forEach((index, word) {
         items.addAll(<Widget>[
           WordItem(
-            // key: Key('$key${word.word}'),
+            index: index,
             word: word,
             mainContext: context,
             onLongPress: openWordDialog,
@@ -106,6 +115,7 @@ class _AfterSplash extends State<AfterSplash> {
         ]);
       });
     });
+
     return items;
   }
 

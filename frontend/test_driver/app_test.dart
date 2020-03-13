@@ -18,12 +18,12 @@ void main() {
 
     Timer timeout;
     setUp(() {
-      timeout = new Timer(new Duration(seconds: 2), () => fail("timed out"));
+//      timeout = new Timer(new Duration(seconds: 2), () => fail("timed out"));
     });
 
     test('First dateItem should be 12 Mar 2020', () async {
       final dateItem0 = find.byValueKey('dateItem0');
-      expect(await driver.getText(dateItem0), "14 Mar 2020");
+      expect(await driver.getText(dateItem0), "13 mar.");
     });
 
     test('First word should be Cat', () async {
@@ -32,9 +32,11 @@ void main() {
     });
 
     test('User tap on wordItem then wordItem should be expanded', () async {
-      final wordItemGesture0 = find.byValueKey('wordItemGesture0');
+      final wordItemGesture0 = find.byValueKey('gesture0');
       await driver.tap(wordItemGesture0);
+    });
 
+    test('First word description and quote should be correct', () async {
       final wordDesc0 = find.byValueKey('wordDesc0');
       expect(
         await driver.getText(wordDesc0),
@@ -74,6 +76,31 @@ void main() {
 
       final saveButton = find.byValueKey('saveButton');
       await driver.tap(saveButton);
+    });
+
+    test('Second word should be Hello', () async {
+      final wordItem0 = find.byValueKey('word1');
+      expect(await driver.getText(wordItem0), "Hello");
+    });
+
+    test('User tap on second wordItem then wordItem should be expanded',
+        () async {
+      final wordItemGesture = find.byValueKey('gesture1');
+      await driver.tap(wordItemGesture);
+    });
+
+    test('Second word description and quote should be correct', () async {
+      final wordDesc = find.byValueKey('wordDesc1');
+      expect(
+        await driver.getText(wordDesc),
+        "Hello is the greeting word",
+      );
+
+      final wordQuote = find.byValueKey('wordQuote1');
+      expect(
+        await driver.getText(wordQuote),
+        "Hello World !!!",
+      );
     });
   });
 }

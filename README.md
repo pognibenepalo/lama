@@ -4,6 +4,8 @@ Purpose
 
 This project is an example of a simple Flutter application, connected to a lambda function and with set of E2E tests. You can use it to play with the tets for the first time and be familiar with a simple REST connexion.
 
+![](demo.gif)
+
 
 How to run the backend
 --

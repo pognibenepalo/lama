@@ -22,6 +22,10 @@ To run the frontend you need to launch the *main.dart*
 How to run the E2E tests
 --
 
-To run the tests from the command line:
+To run the classic flutter tests from the command line:
 
     flutter drive --target=test_driver/app.dart
+
+If you want to run behaviour tests writes in Gherkin from comand line:
+
+    dart test_driver/test_config.dart

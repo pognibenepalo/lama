@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
@@ -13,6 +14,11 @@ void main() {
       if (driver != null) {
         driver.close();
       }
+    });
+
+    Timer timeout;
+    setUp(() {
+      timeout = new Timer(new Duration(seconds: 2), () => fail("timed out"));
     });
 
     test('First dateItem should be 12 Mar 2020', () async {

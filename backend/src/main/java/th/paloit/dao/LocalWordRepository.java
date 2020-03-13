@@ -1,6 +1,6 @@
-package fr.pbenoit.dao;
+package th.paloit.dao;
 
-import fr.pbenoit.model.Word;
+import th.paloit.model.Word;
 
 import java.time.Instant;
 import java.util.ArrayList;

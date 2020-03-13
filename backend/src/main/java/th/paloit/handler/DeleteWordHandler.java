@@ -1,10 +1,10 @@
-package fr.pbenoit.handler;
+package th.paloit.handler;
 
 import com.agileandmore.slsruntime.ApiGatewayResponse;
 import com.agileandmore.slsruntime.ParamsHelper;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import fr.pbenoit.dao.LocalWordRepository;
+import th.paloit.dao.LocalWordRepository;
 
 import java.util.Map;
 

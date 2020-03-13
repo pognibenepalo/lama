@@ -11,28 +11,28 @@ package:
 
 functions:
   createWord:
-    handler: fr.pbenoit.handler.CreateWordHandler
+    handler: th.paloit.handler.CreateWordHandler
     events:
       - http:
           path: api/v1/words
           method: post
           cors: true
   deleteWord:
-    handler: fr.pbenoit.handler.DeleteWordHandler
+    handler: th.paloit.handler.DeleteWordHandler
     events:
       - http:
           path: api/v1/words/{id}
           method: delete
           cors: true
   getAllWord:
-    handler: fr.pbenoit.handler.GetWordHandler
+    handler: th.paloit.handler.GetWordHandler
     events:
       - http:
           path: api/v1/words
           method: get
           cors: true
   updateWord:
-    handler: fr.pbenoit.handler.UpdateWordHandler
+    handler: th.paloit.handler.UpdateWordHandler
     events:
       - http:
           path: api/v1/words/{id}

@@ -1,5 +1,5 @@
 
-package fr.pbenoit.handler;
+package th.paloit.handler;
 
 import com.agileandmore.slsruntime.ApiGatewayResponse;
 import com.agileandmore.slsruntime.ParamsHelper;
@@ -7,8 +7,8 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fr.pbenoit.dao.LocalWordRepository;
-import fr.pbenoit.model.Word;
+import th.paloit.dao.LocalWordRepository;
+import th.paloit.model.Word;
 
 import java.util.Map;
 

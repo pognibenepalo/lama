@@ -1,4 +1,4 @@
-package fr.pbenoit.model;
+package th.paloit.model;
 
 import java.time.Instant;
 import java.util.Date;

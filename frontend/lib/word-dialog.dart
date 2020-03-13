@@ -197,7 +197,6 @@ class _WordDialog extends State<WordDialog> {
                                   newWord.word = formData.word;
                                   newWord.description = formData.description;
                                   newWord.quote = formData.quote;
-                                  newWord.createdAt = DateTime.now();
                                   onSave(word, newWord);
                                   Navigator.of(context).pop();
                                 }

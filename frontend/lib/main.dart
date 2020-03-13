@@ -85,16 +85,12 @@ class _AfterSplash extends State<AfterSplash> {
         });
   }
 
-  String getDateFormat(DateTime date) {
-    return DateFormat("dd MMM yyyy").format(date);
-  }
-
   List<Widget> wordsToItems(List<Word> words, context) {
     List<Widget> items = [];
     var dates = groupBy(words, (obj) {
       Word word = obj as Word;
       // return word.createdAt.day;
-      return getDateFormat(word.createdAt);
+      return word.createdAt;
     });
     var sortedDates = dates.keys.toList()..sort();
     sortedDates.forEach((key) {

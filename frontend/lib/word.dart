@@ -6,8 +6,8 @@ class Word {
   String word;
   String description;
   String quote;
-  DateTime createdAt;
-  DateTime updatedAt;
+  String createdAt;
+  String updatedAt;
   Word(String s, {
     id,
     this.word,
@@ -17,11 +17,9 @@ class Word {
     this.updatedAt
   }): this._id = id;
 
-  get formatedCreatedDate {
-    if (createdAt == null) {
-      return 'N/A';
-    }
-    return DateFormat('dd MMM. yyyy').format(createdAt).toLowerCase();
+  String formateDate(String date) {
+    DateTime dateTime = DateTime.parse(date);
+    return DateFormat('dd MMM. yyyy').format(dateTime).toLowerCase();
   }
 
   get id => this._id;
@@ -31,8 +29,8 @@ class Word {
     word = json['word'];
     quote = json['quote'];
     description = json['description'];
-    createdAt = new DateTime(json['createdAt']);
-    updatedAt = new DateTime(json['updatedAt']);
+    createdAt = formateDate(json['createdAt']);
+    updatedAt = formateDate(json['updatedAt']);
   }
 
   Map<String, dynamic> toJson() =>

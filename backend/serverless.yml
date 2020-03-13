@@ -1,0 +1,41 @@
+service: lama-api
+
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+    
+package:
+  artifact: target/lama-api-1.0-SNAPSHOT.jar
+
+functions:
+  createWord:
+    handler: fr.pbenoit.handler.CreateWordHandler
+    events:
+      - http:
+          path: api/v1/words
+          method: post
+          cors: true
+  deleteWord:
+    handler: fr.pbenoit.handler.DeleteWordHandler
+    events:
+      - http:
+          path: api/v1/words/{id}
+          method: delete
+          cors: true
+  getAllWord:
+    handler: fr.pbenoit.handler.GetWordHandler
+    events:
+      - http:
+          path: api/v1/words
+          method: get
+          cors: true
+  updateWord:
+    handler: fr.pbenoit.handler.UpdateWordHandler
+    events:
+      - http:
+          path: api/v1/words/{id}
+          method: put
+          cors: true
+

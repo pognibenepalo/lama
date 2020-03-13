@@ -123,6 +123,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_gherkin:
+    dependency: "direct main"
+    description:
+      name: flutter_gherkin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.7+6"
   flutter_native_splash:
     dependency: "direct main"
     description:
@@ -147,6 +154,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gherkin:
+    dependency: transitive
+    description:
+      name: gherkin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.7"
   glob:
     dependency: transitive
     description:

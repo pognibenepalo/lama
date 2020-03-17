@@ -65,8 +65,7 @@ class _AfterSplash extends State<AfterSplash> {
     if (oldWord == null) {
       await Dio().post("${Constants.apiServer}/words/", data: newWord.toJson());
     } else {
-      await Dio().put("${Constants.apiServer}/words/${oldWord.id}",
-          data: newWord.toJson);
+      await Dio().put("${Constants.apiServer}/words/${oldWord.id}", data: newWord.toJson());
     }
     fetchWords();
   }

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter_driver/flutter_driver.dart';
+import 'package:intl/intl.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -23,7 +24,9 @@ void main() {
 
     test('First dateItem should be 12 Mar 2020', () async {
       final dateItem0 = find.byValueKey('dateItem0');
-      expect(await driver.getText(dateItem0), "13 mar.");
+      DateTime date = DateTime.now();
+      String dateAsString = DateFormat('dd MMM.').format(date).toLowerCase();
+      expect(await driver.getText(dateItem0), dateAsString);
     });
 
     test('First word should be Cat', () async {

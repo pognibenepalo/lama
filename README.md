@@ -2,23 +2,34 @@ Purpose
 ====
 
 
-This project is an example of a simple Flutter application, connected to a lambda function and with set of E2E tests. You can use it to play with the tets for the first time and be familiar with a simple REST connexion.
+This project is an example of a simple Flutter application, connected to a lambda function and with set of E2E tests. You can use it to play with the tets for the first time and be familiar with a simple REST connection.
+
+Note
+--
+
+For `frontend` to fully functional, you need to run `backend` in the background
+
+Demo
+--
 
 ![](demo.gif)
 
-
-How to run the backend
+How Install this repo
 --
 
-To run the backend locally you need to run the following command:
+    git clone https://github.com/pognibenepalo/lama.git
 
-    mvn -Dtest=Runner test
 
+How to run the backend locally
+--
+
+Navigate to `backend` folder and run `mvn -Dtest=Runner test`
+    
 
 How to run the frontend
 --
 
-To run the frontend you need to launch the *main.dart*
+- Navigate to `frontend` folder and run `flutter run`
 
 
 How to run the E2E tests

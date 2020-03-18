@@ -6,7 +6,11 @@ This project is an example of a simple Flutter application, connected to a lambd
 
 Note
 --
-    For `frontend` to fully functional, you need to run `backend` in the background
+
+For `frontend` to fully functional, you need to run `backend` in the background
+
+Demo
+--
 
 ![](demo.gif)
 

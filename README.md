@@ -10,20 +10,18 @@ How Install this repo
 --
 
     git clone https://github.com/pognibenepalo/lama.git
-    
 
-How to run the backend
+
+How to run the backend locally
 --
 
-To run the backend locally you need to run the following command:
-
-    cd backend && mvn -Dtest=Runner test
-
+Navigate to `backend` folder and run `mvn -Dtest=Runner test`
+    
 
 How to run the frontend
 --
 
-To run the frontend you need to launch the *main.dart*
+Navigate to `frontend` and run `flutter run`
 
 
 How to run the E2E tests

@@ -2,7 +2,11 @@ Purpose
 ====
 
 
-This project is an example of a simple Flutter application, connected to a lambda function and with set of E2E tests. You can use it to play with the tets for the first time and be familiar with a simple REST connexion.
+This project is an example of a simple Flutter application, connected to a lambda function and with set of E2E tests. You can use it to play with the tets for the first time and be familiar with a simple REST connection.
+
+Note
+--
+    For `frontend` to fully functional, you need to run `backend` in the background
 
 ![](demo.gif)
 
@@ -21,7 +25,7 @@ Navigate to `backend` folder and run `mvn -Dtest=Runner test`
 How to run the frontend
 --
 
-Navigate to `frontend` folder and run `flutter run`
+- Navigate to `frontend` folder and run `flutter run`
 
 
 How to run the E2E tests

@@ -6,13 +6,18 @@ This project is an example of a simple Flutter application, connected to a lambd
 
 ![](demo.gif)
 
+How Install this repo
+--
+
+    git clone https://github.com/pognibenepalo/lama.git
+    
 
 How to run the backend
 --
 
 To run the backend locally you need to run the following command:
 
-    mvn -Dtest=Runner test
+    cd backend && mvn -Dtest=Runner test
 
 
 How to run the frontend

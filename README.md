@@ -21,7 +21,7 @@ Navigate to `backend` folder and run `mvn -Dtest=Runner test`
 How to run the frontend
 --
 
-Navigate to `frontend` and run `flutter run`
+Navigate to `frontend` folder and run `flutter run`
 
 
 How to run the E2E tests
